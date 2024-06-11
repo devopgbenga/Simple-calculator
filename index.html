@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="div1"></div>
+      <input id="input1" type="number" />
+      <input id="input2" type="number" />
+      <div class="btn">
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="divide()">/</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let input1 = document.getElementById("input1");
+  let input2 = document.getElementById("input2");
+  let div = document.getElementById("div1");
+
+  function add() {
+    let ans = Number(input1.value) + Number(input2.value);
+    div.textContent = ans;
+    console.log(ans);
+  }
+
+  function subtract() {
+    let ans = Number(input1.value) - Number(input2.value);
+    div.textContent = ans;
+    console.log(ans);
+  }
+
+  function multiply() {
+    let ans = Number(input1.value) * Number(input2.value);
+    div.textContent = ans;
+    console.log(ans);
+  }
+
+  function divide() {
+    let ans = Number(input1.value) / Number(input2.value);
+    div.textContent = ans;
+    console.log(ans);
+  }
+</script>
